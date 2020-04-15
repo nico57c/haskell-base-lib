@@ -1,0 +1,33 @@
+name:                base-lib
+version:             '0.1.0'
+github:              "github.com/nico57c/haskell-base-lib"
+license:             Apache-2.0
+author:              "nico57c"
+maintainer:          "nico57c"
+copyright:           "2020"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+description:         Please see the README on GitHub.
+
+dependencies:
+- base >= 4.7 && < 5
+- time >= 1.9.3
+- HUnit >= 1.6.0.0
+- random >= 1.1
+- hspec >= 2.7.1
+
+library:
+  source-dirs:
+  - src
+
+tests:
+  spec:
+    main:               Spec.hs
+    source-dirs:
+    - test
+    dependencies:
+    - hspec
+    - base-lib

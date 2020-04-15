@@ -1,0 +1,57 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 696626e2714e8e209910e60b82663a22411e1e773140e83f6f6b0399c5bfab8b
+
+name:           base-lib
+version:        0.1.0
+description:    Please see the README on GitHub.
+homepage:       https://github.com/github.com/nico57c#readme
+bug-reports:    https://github.com/github.com/nico57c/issues
+author:         nico57c
+maintainer:     nico57c
+copyright:      2020
+license:        Apache-2.0
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/github.com/nico57c
+  subdir: haskell-base-lib
+
+library
+  exposed-modules:
+      Math.Base62
+  other-modules:
+      Paths_base_lib
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit >=1.6.0.0
+    , base >=4.7 && <5
+    , hspec >=2.7.1
+    , random >=1.1
+    , time >=1.9.3
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_base_lib
+  hs-source-dirs:
+      test
+  build-depends:
+      HUnit >=1.6.0.0
+    , base >=4.7 && <5
+    , base-lib
+    , hspec
+    , random >=1.1
+    , time >=1.9.3
+  default-language: Haskell2010
